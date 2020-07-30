@@ -21,13 +21,12 @@ for i in range(len(letter_list)):
     if i < width or i%width == 0 or i%width == width-1 or i > len(letter_list)-width-1:
         edges.append(i)
 
-target_word = "ASSIGNMENT"
-current_letter = 0
+
+target_word = "SMALL"
 target_word_list = []
 
 
 first_letter = []
-
 for i in range(len(letter_list)):
     if letter_list[i] == target_word[0]:
         first_letter.append(i)
@@ -44,7 +43,6 @@ for i in first_letter:
         if letter_list[j] == target_word[1]:
             target_word_list.append((i, x))
         x += 1
-
 
 
 for beep in target_word_list:
@@ -69,4 +67,10 @@ for beep in target_word_list:
             out_of_bounds = True
     if word == target_word:
         print(word_code)
+
+        print("word starts in column", word_code[0]%width +1,
+            "row", word_code[0]//width + 1,
+            "and ends at column", word_code[-1]%width +1,
+            "row", word_code[-1]//width +1)
+
 

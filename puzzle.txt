@@ -1,5 +1,5 @@
 M	P	B	L	T
-C	V	V	B	S
-T	J	O	I	I
-P	N	T	B	R	
-A	Z	E	S	V
+C	L	V	B	N
+O	J	O	N	I
+P	N	L	B	R
+A	Z	O	S	O

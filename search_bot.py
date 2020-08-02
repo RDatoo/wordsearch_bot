@@ -77,9 +77,6 @@ def find_word(tword):
                 out_of_bounds = True
         if word == target_word and out_of_bounds == False:
 
-            return("word starts in column", word_code[0]%width +1,
-                "row", word_code[0]//width + 1,
-                "and ends at column", word_code[-1]%width +1,
-                "row", word_code[-1]//width +1)
+            return[word_code, f"word starts in column { word_code[0]%width +1} row {word_code[0]//width + 1} and ends at column {word_code[-1]%width +1} row {word_code[-1]//width +1}"]
 
 

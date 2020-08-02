@@ -1,27 +1,28 @@
+
 filename = "puzzle.txt"
-seperater = "\t"
 f = open(filename, "r")
 data = f.read()
 f.close()
 
 #create letter list
+seperater = "\t"
 row_list = data.split("\n")
 letter_list = []
 for i in row_list:
     b_list = i.split(seperater)
     letter_list = letter_list + b_list
 
-#determine width and height
-
+#determine width, height, and edges
 height = len(row_list)
 width = len(row_list[0].split(seperater))
-directions = [-width -1, -width, -width +1, -1, 1, width -1, width, width + 1]
 edges = []
 for i in range(len(letter_list)):
     if i < width or i%width == 0 or i%width == width-1 or i > len(letter_list)-width-1:
         edges.append(i)
 
+directions = [-width -1, -width, -width +1, -1, 1, width -1, width, width + 1]
 
+#find word function
 def find_word(tword):
 
     target_word = tword.upper()
@@ -48,11 +49,11 @@ def find_word(tword):
             if b > len(letter_list)-1:
                 second_letter[y] = 1
             y += 1
+
         for j in second_letter:
             if letter_list[j] == target_word[1]:
                 target_word_list.append((i, x))
             x += 1
-
 
     for pair in target_word_list:
         word_code = [pair[0]]
@@ -76,7 +77,6 @@ def find_word(tword):
             if i in edges:
                 out_of_bounds = True
         if word == target_word and out_of_bounds == False:
-
-            return[word_code, f"word starts in column { word_code[0]%width +1} row {word_code[0]//width + 1} and ends at column {word_code[-1]%width +1} row {word_code[-1]//width +1}"]
+            return[word_code, f"word starts in column {word_code[0]%width +1} row {word_code[0]//width + 1} and ends at column {word_code[-1]%width +1} row {word_code[-1]//width +1}"]
 
 

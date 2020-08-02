@@ -8,7 +8,7 @@ for i in word_list:
         letter_list[j] = "*"
     print(statement)
 
-solved_file = open("solved_puzzle.md","w") 
+solved_file = open("solved_puzzle.txt","w") 
 letter_list_string = ("\t".join(letter_list))
 x = 0 
 y = width*2

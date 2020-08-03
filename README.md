@@ -1,2 +1,2 @@
 # wordsearch_bot
-Automatically completes word searches 
+This is a python bot that automatically solves wordsearches.

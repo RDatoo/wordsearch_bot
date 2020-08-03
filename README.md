@@ -1,7 +1,7 @@
 # wordsearch_bot
-<h2>This is a python bot that automatically solves wordsearches.<h2>
+<h2>A python bot that automatically solves wordsearches.<h2>
 
-<h3>How to use<h3>
+<h3>How to use:<h3>
   
  
 * word search needs to be in a text file with letters seperated by tabs

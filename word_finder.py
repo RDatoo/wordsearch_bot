@@ -1,5 +1,4 @@
-
-filename = "puzzle.txt"
+filename = input("Please enter the filepath for the puzzle: ")
 f = open(filename, "r")
 data = f.read()
 f.close()

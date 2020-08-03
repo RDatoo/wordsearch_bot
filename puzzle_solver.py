@@ -1,5 +1,5 @@
 from word_finder import*
-word_list = ["lorem", "ipsum", "dolor"]
+word_list = input("What words are we looking for (please seperate words by a space): ").split(" ")
 
 for i in word_list:
     word_nums = find_word(i)[0]
@@ -20,3 +20,5 @@ for i in range(height):
     y += width*2
 
 solved_file.close()
+
+print("The solved puzzle has been stored in 'solved_puzzle.txt'")
